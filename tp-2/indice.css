@@ -1,0 +1,78 @@
+cuerpo {
+    color :  # ee6 ;
+    color de fondo :  # 222 ;
+}
+
+cuerpo  h1 {
+    alineación de texto : centro;
+}
+
+pag {
+    familia de fuentes : sans-serif;
+}
+
+h1 ,  h2 ,  h3 {
+    color :  #eee ;​
+    transformación de texto : mayúsculas;
+}
+
+fuerte {
+    ancho-inferior del borde :  1 px sólido # eee ;
+}
+
+. la fuerza {
+   peso de fuente :  700 ;
+    color de fondo :  # 444 ;
+}
+
+. lado luminoso {
+    color :  # 66f ;
+}
+
+. lado oscuro {
+    color :  # f33 ;
+}
+
+# og-trilogía {
+    tipo de estilo de lista : círculo;
+}
+
+fuerte {
+    color blanco ;
+    estilo de borde : sólido;
+    color del borde : blanco;
+    ancho del borde :  0  0  1 px  0 ;
+}
+
+h1 : flotar {
+    color amarillo ;
+}
+
+li  a : visitado {
+    color :  # 444 ;
+}
+
+li : enésimo hijo ( par ){
+    ancho : ajuste al contenido;
+    color de fondo :  # 111 ;
+}
+li : enésimo hijo ( impar ){
+    ancho : ajuste al contenido;
+    color de fondo :  # 333 ;
+}
+
+p :: primera línea {
+    color :  #efe ;​
+}
+
+ul : enésimo tipo ( 2 ){
+    relleno-izquierda :  1 px ;
+}
+
+ul : enésimo tipo ( 3 ) li : último hijo {
+    margen superior :  50 px ;
+}
+
+a : no ([ href ]){    
+    color : aguamarina;
+}
