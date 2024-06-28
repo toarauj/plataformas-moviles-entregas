@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Editor de Texto - DOM y JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container my-1 my-sm-2 my-md-4 my-lg-5">
+        <h1>Editor de Texto</h1>
+        <div class="card">
+            <div class="card-body">
+                <h2>Texto</h2>
+
+                <p class="texto" id="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum auctor libero, vel imperdiet est. Etiam blandit facilisis ex, nec cursus metus pharetra quis. Fusce imperdiet nisl nibh, ac aliquet ante elementum vitae.</p>
+
+                <hr class="hr">
+
+                <h2>Opciones de Formato</h2>
+                <div class="row">
+                    <div class="col-12 col-md-3 my-1">
+                        <button id="btn-negrita" class="btn d-block w-100 btn-primary" data-formato="negrita">
+                            Bold (Negrita)
+                        </button>
+                    </div>
+                    <div class="col-12 col-md-3 my-1">
+                        <button id="btn-cursiva" class="btn d-block w-100 btn-primary" data-formato="cursiva">
+                            Italic (Cursiva)
+                        </button>
+                    </div>
+                    <div class="col-12 col-md-3 my-1">
+                        <button id="btn-subrayado" class="btn d-block w-100 btn-primary" data-formato="subrayado">
+                            Underline (Subrayado)
+                        </button>
+                    </div>
+                    <div class="col-12 col-md-3 my-1">
+                        <button id="btn-color" class="btn d-block w-100 btn-primary" data-formato="color">
+                            Color (Color)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3 row">
+            <textarea class="textarea form-control" rows="5" placeholder="Ingrese texto"></textarea>
+        </div>
+        <div class="mt-3 row col-6">
+            <input type="number" class="numero" placeholder="Ingrese un número">
+        </div>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-primary mt-3" data-formato="texto">Enviar</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        let texto = document.querySelector("p#texto");
+        /**
+         * funcionNegrita()
+         * esta función se va a llamar cuando el usuario selecciona la opción Bold (negrita).
+         */
+        function funcionNegrita() {
+            let boton = document.querySelector("#btn-negrita")
+            texto.classList.toggle("fw-bold");
+            if(texto.classList.contains("fw-bold")){
+                boton.classList.remove("btn-primary");
+                boton.classList.add("btn-secondary");
+            }else{
+                boton.classList.remove("btn-secondary");
+                boton.classList.add("btn-primary");
+            }
+        }
+
+        /**
+         * funcionCursiva()
+         * esta función se va a llamar cuando el usuario selecciona la opción Bold (negrita).
+         */
+        function funcionCursiva() {
+            let boton = document.querySelector("#btn-cursiva")
+            texto.classList.toggle("fst-italic");
+            if(texto.classList.contains("fst-italic")){
+                boton.classList.remove("btn-primary");
+                boton.classList.add("btn-secondary");
+            }else{
+                boton.classList.remove("btn-secondary");
+                boton.classList.add("btn-primary");
+            }
+        }
+
+        /**
+         * funcionSubrayado()
+         * esta función se va a llamar cuando el usuario selecciona la opción Bold (negrita).
+         */
+        function funcionSubrayado() {
+            let boton = document.querySelector("#btn-subrayado")
+            texto.classList.toggle("text-decoration-underline");
+            if(texto.classList.contains("text-decoration-underline")){
+                boton.classList.remove("btn-primary");
+                boton.classList.add("btn-secondary");
+            }else{
+                boton.classList.remove("btn-secondary");
+                boton.classList.add("btn-primary");
+            }
+        }
+
+        /**
+         * funcionColor()
+         * esta función se va a llamar cuando el usuario selecciona la opción Bold (negrita).
+         */
+         function funcionColor() {
+            let boton = document.querySelector("#btn-color")
+            texto.classList.toggle("text-primary");
+            if(texto.classList.contains("text-primary")){
+                boton.classList.remove("btn-primary");
+                boton.classList.add("btn-secondary");
+            }else{
+                boton.classList.remove("btn-secondary");
+                boton.classList.add("btn-primary");
+            }
+        }
+
+        /**
+         * funcionTexto()
+         * esta función se va a llamar cuando el usuario envia el form del textarea.
+         */
+         function funcionTexto() {
+            let textAreaTexto = document.querySelector(".textarea").value;
+            if(textAreaTexto){
+                texto.innerText = textAreaTexto;
+            }
+            let tamano = document.querySelector(".numero").value;
+            if(tamano){
+                texto.style.fontSize = tamano + "px";
+            }
+        }
+
+        function handlerBoton(e) {
+            const funcionBoton = e.target.dataset.formato;
+            switch (funcionBoton) {
+                case 'negrita':
+                    funcionNegrita();
+                    break;
+                case 'cursiva':
+                    funcionCursiva();
+                    break;
+                case 'subrayado':
+                    funcionSubrayado();
+                    break;
+                case 'color':
+                    funcionColor();
+                    break;
+                case 'texto':
+                    funcionTexto();
+                    break;
+            }
+        }
+        document.querySelectorAll('button.btn').forEach(e => e.addEventListener('click', handlerBoton));
+    </script>
+</body>
+</html>
