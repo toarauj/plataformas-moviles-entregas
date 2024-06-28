@@ -1,0 +1,82 @@
+/* 1) Define una media query que cambie el color de fondo del cuerpo a rgb(40,60,80) cuando la pantalla
+tenga más de 400px de ancho */
+@media (ancho > = 400 px ) {
+    cuerpo {
+        color de fondo :  rgb ( 40 , 60 , 80 );
+    }
+}
+
+/* 2) Define una media query que centre el título h1 cuando la pantalla tenga menos de 800px de ancho */
+@media (ancho < = 800 px ){
+    h1 {
+        alinear texto : centro;
+    }
+}
+
+/* 3) Define una media query para que el ancho máximo (max-width) del artículo sea 50ch creando el
+El dispositivo tiene una pantalla orientada en horizontal (más espacio de ancho que de alto). */
+@media ( orientación : horizontal){
+    artículo {
+        ancho máximo :  50 canales
+    }
+}
+
+
+/* 4) Define una media query para que cambie el color de fondo del título principal h1 cuando el alto
+de la pantalla sea como mínimo 200px. */
+@media (ancho > = 200 px ){
+    h1 {
+        color de fondo : rojo;
+    }
+}
+
+/* 5) Define una media query para cambiar el estilo del texto de todos los párrafos para que muestren
+una fuente font-family: serif; cuando la página se imprime (en papel) */
+@media impresión{
+    pag {
+        familia de fuentes : serif;
+    }
+}
+
+/* 6) Si el usuario prefiere un estilo de colores claros, mostrar los elementos body y h1 con el
+texto en color #111 y el fondo en color #DDD. */
+@media ( prefiere esquema de color : claro){
+    cuerpo ,  h1 {
+        color :  # 111  ! importante ;
+        color de fondo :  # ddd  !importante ;
+    }
+}
+
+/* 7) Si el dispositivo del usuario es una pantalla y además no soporta la acción hover, mostrar
+los enlaces con el color de fondo #212 y con un padding vertical de 2px y horizontal de 5px*/
+@pantalla multimedia y ( colocar el cursor sobre : ​​ninguno){
+    a {
+        relleno :  2 px  5 px ;
+        color de fondo :  # 212 ;
+    }
+}
+
+/* 8) Si el dispositivo del usuario es una pantalla y tiene 800px o más de ancho, pero menos de
+900px, la imagen no se tiene que mostrar */
+@pantalla multimedia y (800 px < =  ancho < = 900 px){
+    imagen {
+        visibilidad : oculta;
+    }
+}
+
+/* 9) Si el dispositivo del usuario es una pantalla, y tiene entre 200px y 400px de ancho, mostrar
+la imagen con una altura de 400px, y con el siguiente estilo: object-fit:cover;. */
+@media pantalla y (200 px < =  ancho < = 400 px){
+    imagen {
+        altura :  400 píxeles ;
+        ajuste de objeto : cubierta;
+    }
+}
+
+/* 10) Define una consulta para el color de fondo del elemento article cambia a #667 cuando un Device Pixel Ratio
+de la pantalla del dispositivo sea mayor a 2. Ayuda: resolución de consultas de medios, con una unidad expresada en dppx */
+@media ( resolución mínima :  2 dppx ){
+    artículo {
+        color de fondo :  # 667 ;
+    }
+}
