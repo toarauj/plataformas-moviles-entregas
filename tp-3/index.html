@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<htmllang="es">
+<cabeza>
+	<meta juego de caracteres="utf-8">
+	<meta nombre="viewport" content="ancho=ancho-dispositivo, escala-inicial=1">
+	<title>TP3 - Especificidad CSS</title>
+	<link rel="hoja de estilo" tipo="texto/css" href="indice2.css">
+	<tipo de estilo="texto/css">
+		cuerpo {
+			tamaño de fuente: 18px;
+			color de fondo: #ffe;
+			color: #210;
+		}
+
+		#contenedor {
+			ancho máximo: 40 canales;
+			margen: 2rem auto;
+			relleno: 1rem;
+		}
+
+		h1 {
+			tamaño de fuente: 2rem;
+			alineación de texto: izquierda;
+		}
+
+		pag {
+			familia de fuentes: sans-serif;
+		}
+
+		#primer-parrafo {
+			tamaño de fuente: 1.3rem;
+			color de fondo: #eec;
+		}
+
+		p.importante en {
+			peso de fuente: negrita;
+			color: #144;
+		}
+
+		p.novelas a {
+			contorno: ninguno;
+			decoración de texto: ninguna;
+		}
+		p.novelas a:hover {
+			decoración de texto: subrayado;
+			color de fondo: #ccd;
+		}
+
+		cuerpo p.fuente.parrafo {
+			color: #999 !importante;
+			tamaño de fuente: 0.9rem;
+			opacidad: 75%;
+			alinear texto: centro;
+		}
+
+	</estilo>
+</cabeza>
+<cuerpo>
+	<artículo id="contenedor">
+		<h1 class="titulo">Gandalf</h1>
+
+		<p id="primer-parrafo" class="importante parrafo">
+			Gandalf es un personaje ficticio perteneciente al <em>legendarium</em> del escritor británico <a href="https://es.wikipedia.org/wiki/J._R._R._Tolkien">JRR Tolkien.</a >
+		</p>
+
+		<p class="novelas parrafo">
+			Es uno de los personajes principales de las novelas <a href="https://es.wikipedia.org/wiki/El_hobbit">El hobbit</a> y <a href="https://es.wikipedia.org/wiki/El_Señor_de_los_Anillos">El Señor de los Anillos</a>, aunque también aparece en <span class="complicado" style="color: #622">El Silmarillion</span>, donde se narran sus orígenes.
+		</p>
+	</artículo>
+
+	<p class="fuente parrafo">
+		Fuente: <a href="https://es.wikipedia.org/wiki/Gandalf">https://es.wikipedia.org/wiki/Gandalf</a>
+	</p>
+</cuerpo>
+</html>
