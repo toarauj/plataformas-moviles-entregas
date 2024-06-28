@@ -1,0 +1,134 @@
+<!DOCTYPE html >
+<html>​​
+<cabeza >
+	<meta  juego de caracteres =" utf-8 " >
+	<meta  name = " ventana gráfica " content = " ancho=ancho-del-dispositivo, escala-inicial=1 " >
+	<title > TP-7: Funciones en JavaScript </title >
+</cabeza>​​
+<cuerpo>
+<tipo de script  =" texto/javascript ">
+    <script>
+// Numeros
+
+// Implementar una función "suma" que devuelva la suma de 2 números
+// ejemplo: suma(2,3) retorna 5
+
+función  suma ( num1 ,  num2 )  {
+    devolver  número1  +  número2 ;
+}
+
+consola .log ( " suma (2,3) : " , suma ( 2,3 ) ) 
+
+// Implementar una función "elevarAlCubo" que eleva al cubo un número
+// ejemplo: elevarAlCubo(3) retorna 27
+
+let  elevarAlCubo  =  num  =>  {
+    devolver  número ** 3 ;
+}
+
+consola . log ( "elevarAlCubo(3): " ,  elevarAlCubo ( 3 ) )
+
+// Implementar una función "restoDivisionEntera" para devolver el resto de una división entera entre un dividendo y un divisor
+// ejemplo: restoDivisionEntra(3,2) respuesta 1
+
+deje que  funcionRestoDivisionEntera  =  function ( dividendo , divisor ) {
+    devolver  dividendo  %  divisor
+}
+
+consola . log ( "restoDivisionEntera(3,2): " ,  funcionRestoDivisionEntera ( 3 , 2 ) )
+
+// Implementar una función "numeroPi" para devolver el número PI
+// ejemplo: numeroPi() retorna 3,14...
+
+función  numeroPi ( ) {
+    Devolver  Matemáticas.PI​​
+}
+
+consola .log ( " numeroPi(): " ,  numeroPi ( ) )
+
+// Implementar una función "numeroRandom" para devolver un número aleatorio
+// ejemplo: numeroRandom() retorna 0,123...
+
+función  numeroAleatorio ( )  {
+    devuelve  Math . random ( ) ;
+}
+
+consola .log ( " numeroRandom(): " ,  numeroRandom ( ) ) )
+
+// Implementar una función "mejorNumeroRandom" para devolver un número aleatorio entre 2 valores recibidos como parámetros
+// ejemplo: mejorNumeroRandom(1,6) respuesta 3
+
+función  mejorNumeroRandom ( min ,  max )  {
+    devuelve  Math . random ( )  *  ( max  -  min )  +  min ;
+}
+
+consola . log ( "mejorNumeroRandom(1,6): " ,  mejorNumeroRandom ( 1 , 6 ) )
+
+// Cadenas de Caracteres
+
+// Implementar una función "transformarMayuscula" que transforme a mayúscula la palabra recibida como parámetro
+// ejemplo: transformarMayuscula("Plataformas Móviles") retorna "PLATAFORMAS MÓVILES"
+
+function  transformarMayuscula ( texto )  {
+    devuelve  texto .toUpperCase ( ) ;​
+}
+
+consola . log ( "transformarMayuscula(\"Plataformas Móviles\"): " ,  transformarMayuscula ( "Plataformas Móviles" ) )
+
+// Implementar una función "primeraLetra" que nos devuelva la inicial de la palabra recibida como parámetro
+// ejemplo: primeraLetra("Plataformas") retorna "P"
+
+función  primeraLetra ( texto )  {
+    devuelve  texto . charAt ( 0 ) ;
+}
+
+consola . log ( "primeraLetra(\"Plataformas\"): " ,  primeraLetra ( "Plataformas" ) )
+
+// Implementar una función "ultimaLetra" que nos devuelva la letra final a la palabra recibida como parámetro
+// ejemplo: ultimaLetra("Plataformas") retorna "s"
+
+función  ultimaLetra ( texto )  {
+    devolver  texto . charAt ( texto.longitud - 1 ) ;​​  
+}
+
+consola . log ( "ultimaLetra(\"Plataformas\"): " ,  ultimaLetra ( "Plataformas" ) )
+
+// Implementar una función "primeraLetraMayuscula" que devuelve la palabra original con su primera letra en mayúscula
+// ejemplo: primeraLetraMayuscula("plataformas") retorna "Plataformas"
+
+function  primeraLetraMayuscula ( texto )  {
+    devuelve  texto.charAt ( 0 ) .toUpperCase ( ) + texto.slice ( 1 ) ;​​​​​  
+}
+
+consola . log ( "primeraLetraMayuscula(\"plataformas\"): " ,  primeraLetraMayuscula ( "plataformas" ) )
+
+// Implementar una función "palabraAListaDeLetras" que dada una palabra me retorna un listado de sus letras
+// ejemplo: palabraAListaDeLetras("hola") retorna ['h', 'o', 'l', 'a'];
+
+function  palabraAListaDeLetras ( texto )  {
+    devolver  texto . dividir ( '' ) ;
+}
+
+consola . log ( "palabraAListaDeLetras(\"hola\"): " ,  palabraAListaDeLetras ( "hola" ) )
+
+// Implementar una función "listaDeLetrasAPalabra" que da un listado de letras, devuelve una palabra
+// ejemplo: listadoDeLetrasAPalabra(["h", "o", "l", "a"]) retorna "hola";
+
+función  listadoDeLetrasAPalabra ( lista )  {
+    volver  lista . unirse ( '' ) ;
+}
+
+consola . log ( "listadoDeLetrasAPalabra([\"h\", \"o\", \"l\", \"a\"]): " ,  listadoDeLetrasAPalabra ( [ "h" ,  "o" ,  "l" ,  " a" ] ) )
+
+// Implementar una función "palabraInvertida" que devuelva la palabra invertida
+// ejemplo: palabraInvertida("hola") retorna "aloh";
+
+función  palabraInvertida ( palabra )  {
+    devolver  palabra . dividir ( '' ) . contrarrestar ( ) . unirse ( '' ) ;
+}
+
+consola . log ( "palabraInvertida(\"hola\"): " ,  palabraInvertida ( "hola" ) )
+
+</script>​​
+</cuerpo>
+</html>
